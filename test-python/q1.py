@@ -23,7 +23,7 @@ if __name__ == "__main__":
     .format("csv")\
     .option("inferSchema","true")\
     .option("header","true")\
-    .load('/content/spark-test/shot_logs.csv')
+    .load(sys.argv[1])
 
   players_wanted=['james harden', 'chris paul', 'stephen curry', 'lebron james']
 
