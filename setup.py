@@ -31,11 +31,11 @@ os.system("rm -rf /usr/local/hadoop-3.3.1/ && unlink /usr/local/hadoop && rm -rf
 os.system("sed -i /JAVA_HOME/d /root/.bashrc && sed -i /hadoop/d /root/.bashrc && sed -i /StrictHostKeyChecking/d /etc/ssh/ssh_config")
 
 if os.path.exists("/hdfs-test/hadoop-3.3.1.tar.gz"):
-	os.system("cp /hdfs-test/hadoop-3.3.1.tar.gz /spark-examples/")
+	os.system("cp /hdfs-test/hadoop-3.3.1.tar.gz /spark-lab/")
 
 if not os.path.exists("/hdfs-test/hadoop-3.3.1.tar.gz"):
 	print("Downloading Hadoop 3.3.1....")
-	os.system("curl https://archive.apache.org/dist/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz > /spark-examples/hadoop-3.3.1.tar.gz")
+	os.system("curl https://archive.apache.org/dist/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz > /spark-lab/hadoop-3.3.1.tar.gz")
 	print("Download Hadoop 3.3.1 Successful...")
 
 print("Install Hadoop 3.3.1 .....")
@@ -67,13 +67,13 @@ print("Downloading and install  Scala2.11.12")
 os.system("curl https://downloads.lightbend.com/scala/2.11.12/scala-2.11.12.tgz > /scala-2.11.12.tgz && tar -xzf /scala-2.11.12.tgz -C /usr/local/ && ln -s /usr/local/scala-2.11.12 /usr/local/scala")
 print("Finished install scala-2.11.12")
 
-if not os.path.exists("/spark-examples/spark-3.2.1-bin-hadoop3.2.tgz"):
+if not os.path.exists("/spark-lab/spark-3.2.1-bin-hadoop3.2.tgz"):
 	print("Downloading Spark 3.2.1....")
-	os.system("curl https://archive.apache.org/dist/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz > /spark-examples/spark-3.2.1-bin-hadoop3.2.tgz")	
+	os.system("curl https://archive.apache.org/dist/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz > /spark-lab/spark-3.2.1-bin-hadoop3.2.tgz")	
 	print("Download Spark 3.2.1 Successful...")
 
 print("Install Spark 3.2.1 .....")
-os.system("tar -xzf /spark-examples/spark-3.2.1-bin-hadoop3.2.tgz -C /usr/local/ && ln -s /usr/local/spark-3.2.1-bin-hadoop3.2/ /usr/local/spark")
+os.system("tar -xzf /spark-lab/spark-3.2.1-bin-hadoop3.2.tgz -C /usr/local/ && ln -s /usr/local/spark-3.2.1-bin-hadoop3.2/ /usr/local/spark")
 print("Finished Install Spark 3.3.1....")
 
 
